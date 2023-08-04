@@ -1,0 +1,76 @@
+{
+  "name": "LiteBlog",
+  "description": "A simple backend blog framework.",
+  "link": [
+    {
+      "name": "首页",
+      "url": "/"
+    },
+    {
+      "name": "标签",
+      "url": "/pages/tags.xml"
+    },
+    {
+      "name": "关于",
+      "url": "/articles/about.md",
+      "class": "about",
+      "tags": "about"
+    }
+  ],
+  "tags": [
+    "about",
+    "test"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "extensions": {
+    "main": [
+      "/extensions/Pio/static/l2d.js",
+      "/extensions/Pio/static/pio.js",
+      "/extensions/Pio/launcher.js"
+    ],
+    "conf": {
+      "LitePlayer": {
+        "songs": "default"
+      },
+      "Pio": {
+        "style": "/extensions/Pio/static/pio.css",
+        "width": 300,
+        "height": 500,
+        "location": "right",
+        "parameter": {
+          "mode": "fixed",
+          "hidden": false,
+          "content": {
+            "welcome": [
+              "欢迎来到我的博客！",
+              "今天天气不错，一起来玩吧！"
+            ],
+            "custom": [
+              {
+                "selector": ".comment-form",
+                "text": "欢迎参与本文评论~"
+              },
+              {
+                "selector": ".about",
+                "text": "在这里可以了解博主哦~"
+              },
+              {
+                "selector": ".post-item a",
+                "type": "read"
+              },
+              {
+                "selector": ".post-content a, .page-content a",
+                "type": "link"
+              }
+            ]
+          },
+          "night": "single.night()",
+          "model": [
+            "/extensions/Pio/models/pio/model.json",
+            "/extensions/Pio/models/mei/model.json"
+          ]
+        }
+      }
+    }
+  }
+}
